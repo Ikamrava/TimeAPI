@@ -1,27 +1,33 @@
-const unsplashURL = "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
-const body = document.getElementById("body")
+body = document.getElementById("body")
 
 async function getIranTime(){
     const res = await fetch(`http://worldtimeapi.org/api/timezone/Asia/Tehran`)
     const data = await res.json()
     time = data.datetime.slice(11,-13)
-    console.log(time)
+    document.getElementById("irantime").textContent = time
 }
 async function getLondonTime(){
     const res = await fetch(`http://worldtimeapi.org/api/timezone/Europe/London`)
     const data = await res.json()
     time = data.datetime.slice(11,-13)
+    console.log(time)
 }
 
 async function background(){
-    const res = await fetch(unsplashURL)
+    const res = await fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=iran")
     const data = await res.json()
     console.log(data)
+    const backgroundURL=data.urls.regular
+    body.style.backgroundImage = `url(${backgroundURL})`
+    
+   
 }
 
 
 
-
+getIranTime()
+getLondonTime()
+background()
 
 const invertColor = (bg) => {
 	bg=parseInt(Number(bg.replace('#', '0x')), 10)

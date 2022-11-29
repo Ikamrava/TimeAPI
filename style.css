@@ -8,14 +8,17 @@
     
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     max-width: 1100px;
     min-width: 600px;
+    width: 100%;
     height:100vh;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     mix-blend-mode: difference;
     font-weight: 900;
+    text-shadow: 0px 0px 20px #aaaaaa;
     
 
 }
@@ -23,7 +26,11 @@
 .irantime{
     position: absolute;
     right:5vh;
-    top:90vh;
+    top:85vh;
     font-size: 2.5rem;
+    filter: invert(100%);
     
+}
+.iran{
+    font-size: 1.15rem;
 }
