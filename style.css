@@ -16,21 +16,55 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    mix-blend-mode: difference;
     font-weight: 900;
     text-shadow: 0px 0px 20px #aaaaaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+
+    
     
 
 }
 
-.irantime{
-    position: absolute;
-    right:5vh;
-    top:85vh;
+.iransection{
     font-size: 2.5rem;
-    filter: invert(100%);
-    
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 4rem;
+    color: white;
 }
 .iran{
     font-size: 1.15rem;
+    margin-bottom: 40px;
+}
+.irantxt{
+    font-size: 1.5rem;
+
+}
+
+.topwrapper,.bottomwrapper{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 20px;
+    
+    
+}
+a{
+    color: white;
+}
+input{
+    
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px rgb(250, 250, 250) solid;
+    font-size: 1.5rem;
+    outline: none;
+    color: white;
+}
+input::f{
+    border: none;
 }

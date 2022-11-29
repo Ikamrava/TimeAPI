@@ -18,14 +18,11 @@ async function getLondonTime(){
         fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=iran")
         .then(res => res.json())
         .then(data => {
-        const backgroundURL= data.urls.regular
-        console.log(data)
-        body.style.backgroundImage = `url(${backgroundURL})`
+         body.style.backgroundImage = `url(${data.urls.regular})`
+    
 
-    }).catch(err => {
-        console.log("Something went wrong! 😭")
-        body.style.backgroundImage = `url("https://images.unsplash.com/photo-1530311583484-ea8bf4c407fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")`
-
+    }).catch(e => {
+        body.style.backgroundImage = `url("./main.png")`
     })
 
 
@@ -33,9 +30,15 @@ async function getLondonTime(){
     getLondonTime()
 
         
-  
-        
- 
+  fetch("https://api.coingecko.com/api/v3/coins/01coin")   
+  .then(res => res.json())
+  .then(data => {
+   console.log(data.market_data.current_price.gbp)
+
+
+}).catch(e => {
+  console.log(e)
+})
     
 
 
@@ -52,3 +55,5 @@ const invertColor = (bg) => {
   
   return bg
 }
+
+
