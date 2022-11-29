@@ -1,7 +1,29 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.body{
     
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 640px;
+    max-width: 1100px;
+    min-width: 600px;
+    height:100vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    mix-blend-mode: difference;
+    font-weight: 900;
+    
 
+}
+
+.irantime{
+    position: absolute;
+    right:5vh;
+    top:90vh;
+    font-size: 2.5rem;
+    
 }
