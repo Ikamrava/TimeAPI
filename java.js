@@ -13,21 +13,35 @@ async function getLondonTime(){
     console.log(time)
 }
 
-async function background(){
-    const res = await fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=iran")
-    const data = await res.json()
-    console.log(data)
-    const backgroundURL=data.urls.regular
-    body.style.backgroundImage = `url(${backgroundURL})`
+
+
+        fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=iran")
+        .then(res => res.json())
+        .then(data => {
+        const backgroundURL= data.urls.regular
+        console.log(data)
+        body.style.backgroundImage = `url(${backgroundURL})`
+
+    }).catch(err => {
+        console.log("Something went wrong! 😭")
+        body.style.backgroundImage = `url("https://images.unsplash.com/photo-1530311583484-ea8bf4c407fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")`
+
+    })
+
+
+    getIranTime()
+    getLondonTime()
+
+        
+  
+        
+ 
     
-   
-}
 
 
 
-getIranTime()
-getLondonTime()
-background()
+
+
 
 const invertColor = (bg) => {
 	bg=parseInt(Number(bg.replace('#', '0x')), 10)
