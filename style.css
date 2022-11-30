@@ -135,11 +135,3 @@ img{
     font-size: 1.5rem;
 }
 
-@media(max-width:460px){
-    .bottomwrapper{
-        
-        align-items: flex-end;
-        text-align: center;
-        
-    }
-}
