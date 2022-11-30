@@ -50,11 +50,8 @@
     color: white;
     justify-content: space-between;
     padding: 20px;
-    align-items: flex-end;
+    align-items: center;
     text-align: center;
-    padding-bottom: 30vh;
-   
-    
 }
 
 .topwrapper{
@@ -136,4 +133,13 @@ img{
 
 .londontime{
     font-size: 1.5rem;
+}
+
+@media(min-width:400px){
+    .bottomwrapper{
+        
+        align-items: flex-start;
+        text-align: center;
+        margin-top: 10vh;
+    }
 }
