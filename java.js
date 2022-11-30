@@ -12,10 +12,11 @@ navigator.geolocation.getCurrentPosition(position => {
          
           iconurl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
           document.getElementById("yweatherwrap").innerHTML = `
+          <img id="yicon"src="${iconurl}">
           <p id="yname">${data.name}</p>
           <p id="ytemp">Temp: ${Math.round(data.main.temp)}°</p>
           <p id="yhum">Humidity: ${data.main.humidity}%</p>
-          <img id="yicon"src="${iconurl}">`
+          `
 
         })
 
@@ -29,10 +30,11 @@ navigator.geolocation.getCurrentPosition(position => {
           console.log(data)
           iconurl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
           document.getElementById("shiraztemp").innerHTML = `
+          <img id="yicon"src="${iconurl}">
           <p id="yname">${data.name}</p>
           <p id="ytemp">Temp: ${Math.round(data.main.temp)}°</p>
-          <p id="yhum">Humidity: ${data.main.humidity}%</p>
-          <img id="yicon"src="${iconurl}">`
+          <p id="yhum">Humidity: ${data.main.humidity}%</p>`
+          
 
         })
 
