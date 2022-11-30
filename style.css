@@ -71,8 +71,8 @@ a{
 input{
     min-width: 350px;
     max-width: 600px;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
     background-color: transparent;
     border: none;
     border-bottom: 3px rgb(250, 250, 250) solid;
