@@ -1,5 +1,6 @@
-body = document.getElementById("body")
+const body = document.getElementById("body")
 body.style.backgroundColor = "#E1EDEF"
+const input = document.getElementById("inputsearch")
 
 navigator.geolocation.getCurrentPosition(position => {
 
@@ -27,7 +28,7 @@ navigator.geolocation.getCurrentPosition(position => {
         
         .then(res => res.json())
         .then(data => {
-          console.log(data)
+          
           iconurl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
           document.getElementById("shiraztemp").innerHTML = `
           <img id="yicon"src="${iconurl}">
@@ -67,7 +68,6 @@ navigator.geolocation.getCurrentPosition(position => {
 
       document.getElementById("londontime").textContent = time
 
-      console.log(time)
   }
 
   getIranTime()
@@ -78,7 +78,7 @@ navigator.geolocation.getCurrentPosition(position => {
   
 
         
-/*fetch("http://api.navasan.tech/latest/?api_key=freeawVldcKZKlXxKITzsMVwk3A1J9Wu ")   
+fetch("http://api.navasan.tech/latest/?api_key=freeawVldcKZKlXxKITzsMVwk3A1J9Wu ")   
   .then(res => {
     if (!res.ok) {
         throw Error("Something went wrong")
@@ -96,31 +96,19 @@ navigator.geolocation.getCurrentPosition(position => {
   document.getElementById("priceDollor").textContent = "Dollar Price:   " + (us/1000).toFixed(3)+ "   قیمت دلار"
   document.getElementById("priceSeke").textContent = "Coin Price:   " + (seke/1000).toFixed(6)+ "   قیمت سکه"
   document.getElementById("currency").textContent = "Currency Price on " + date
-  //  document.getElementById("icon").src = data.image.thumb
-  //  document.getElementById("coinname").textContent = data.name
-  //  console.log(data.market_data.current_price.gbp)
-  //  console.log(data.image.thumb)
-  //  console.log(data.name)
+
 
 }).catch(e => {
   document.getElementById("currency").textContent = "Currency is not available at this time"
 })
-*/
-  
+
+
+document.getElementById("Gsearch").addEventListener("click",function(){
+  window.open(`http://google.com/search?q=${input.value}`);
+})
 
 
 
-const invertColor = (bg) => {
-	bg=parseInt(Number(bg.replace('#', '0x')), 10)
-  bg=~bg
-  bg=bg>>>0
-  bg=bg&0x00ffffff
-  bg='#' + bg.toString(16).padStart(6, "0")
-  
-  return bg
-}
-
-        
 
 
 

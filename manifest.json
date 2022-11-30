@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "version": "1.00",
-  "name": "Time Stamp",
-  "description": "Show times and Currency",
+  "name": "Iran Currency",
+  "description": "Show Iran times and Currency",
   "permissions": [
     "geolocation"
   ],
