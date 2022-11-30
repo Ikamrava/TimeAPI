@@ -3,8 +3,12 @@
   "version": "1.00",
   "name": "Time Stamp",
   "description": "Show times and Currency",
+  "permissions": [
+    "geolocation"
+  ],
   "action": {
     "default_popup": "index.html"
     
   }
+  
 }
