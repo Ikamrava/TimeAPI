@@ -50,9 +50,9 @@
     color: white;
     justify-content: space-between;
     padding: 20px;
-    align-items: center;
+    align-items: flex-end;
     text-align: center;
-    margin-top: 10vh;
+    margin-bottom: 10vh;
     
 }
 
