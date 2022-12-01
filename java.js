@@ -44,15 +44,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
 
 
-        fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=iran")
-        
-        .then(res => res.json())
-        .then(data => {
-        body.style.backgroundImage = `url(${data.urls.regular})`
-    }).catch(e => {
-         body.style.backgroundImage = `url("./main.png")`
-
-    })
+   
 
 
     async function getIranTime(){
@@ -78,7 +70,7 @@ navigator.geolocation.getCurrentPosition(position => {
   
 
         
-fetch("http://api.navasan.tech/latest/?api_key=freeawVldcKZKlXxKITzsMVwk3A1J9Wu ")   
+fetch("http://api.navasan.tech/latest/?api_key=freetGIz1po6UAzt2lhmGDT3YC9kieyx")   
   .then(res => {
     if (!res.ok) {
         throw Error("Something went wrong")
@@ -92,7 +84,7 @@ fetch("http://api.navasan.tech/latest/?api_key=freeawVldcKZKlXxKITzsMVwk3A1J9Wu 
     let seke = data.sekkeh.value
     let date = data.gbp.date
 
-  document.getElementById("pricetoGBP").textContent = "Pond Price:   " + (gbp/1000).toFixed(3) + "   قیمت پوند"
+  document.getElementById("pricetoGBP").textContent = "Pound Price:   " + (gbp/1000).toFixed(3) + "   قیمت پوند"
   document.getElementById("priceDollor").textContent = "Dollar Price:   " + (us/1000).toFixed(3)+ "   قیمت دلار"
   document.getElementById("priceSeke").textContent = "Coin Price:   " + (seke/1000).toFixed(6)+ "   قیمت سکه"
   document.getElementById("currency").textContent = "Currency Price on " + date
@@ -110,6 +102,15 @@ document.getElementById("Gsearch").addEventListener("click",function(){
 
 
 
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=iran")
+        
+.then(res => res.json())
+.then(data => {
+body.style.backgroundImage = `url(${data.urls.regular})`
+}).catch(e => {
+ body.style.backgroundImage = `url("./main.png")`
+
+})
 
 
 
